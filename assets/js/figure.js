@@ -20,7 +20,7 @@
     ['Step through how bloom turns one cell’s measurements into a representation.', '', ''],
     ['A single cell is profiled: genes (RNA) and chromatin peaks (ATAC) are measured along the genome, each with its own signal.', '', ''],
     ['Each measured gene or peak becomes a ', 'token', ' carrying its sequence, genomic position and value.\nTokens are sampled from the universe of all measured genes and peaks to form two overlapping views of the same cell.'],
-    ['Each view passes through the encoder in turn: attention heads over sequence, position and value, then a Perceiver that condenses the tokens into one cell representation. From each representation the reconstruction head predicts gene and peak values in a held-out query view, and VISReg pulls the two views’ representations together, so the cell is described the same way whichever features were sampled.', '', '']
+    ['Each view passes through the encoder in turn: attention heads over sequence, position and value, then a Perceiver that condenses the tokens into one cell representation. From each representation the reconstruction head predicts gene and peak values, and VISReg pulls the two views’ representations together.', '', '']
   ];
 
   // ---- The glowing dot: [start, end] of each hop, per view -----------------
