@@ -70,7 +70,7 @@ h1 {
 .hero-logo img { width: min(100%, 420px); height: auto; }
 @media (max-width: 720px) {
   .site-header { display: none; }                 /* the logo carries the name on phones */
-  .hero { padding-top: 40px; gap: 32px; }
+  .hero { padding-top: 40px; padding-bottom: 40px; gap: 32px; }
   .hero-logo { order: -1; justify-content: flex-start; }
   .hero-logo img { width: 200px; }
 }
@@ -176,4 +176,15 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
 
 @media (prefers-reduced-motion: reduce) {
   .logo-reveal { animation: none; }
+}
+
+/* phones: each section fills the screen and scrolling snaps to it, so the figure lands centred.
+   Kept last so it overrides the base section padding above. */
+@media (max-width: 720px) {
+  html { scroll-snap-type: y mandatory; }
+  .hero, .model { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; }
+  .hero { align-content: center; }
+  .model { display: flex; align-items: center; }
+  .model-inner { width: 100%; padding-top: 32px; padding-bottom: 32px; }
+  .step-text { min-height: 13em; }  /* room for the longest step text, so the layout doesn't jump */
 }
