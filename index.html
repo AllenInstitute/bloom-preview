@@ -95,7 +95,7 @@
           <g data-op="views">
             <ellipse class="view view-a" cx="460" cy="200" rx="82" ry="76"/>
             <ellipse class="view view-b" cx="580" cy="200" rx="104" ry="96"/>
-            <text class="t-view" x="446" y="148" text-anchor="middle">View I</text>
+            <text class="t-view" x="460" y="150" text-anchor="middle">View I</text>
             <text class="t-view" x="580" y="130" text-anchor="middle">View II</text>
           </g>
           <g data-tokens></g>
@@ -137,6 +137,8 @@
           <!-- cell representation (one slot, view I then view II) -->
           <circle class="emb" data-op="embA" cx="1115" cy="200" r="8"/>
           <circle class="emb dashed" data-op="embB" cx="1115" cy="200" r="8"/>
+          <text class="t-note" font-size="12" data-op="embA" x="1115" y="186" text-anchor="middle">View I</text>
+          <text class="t-note" font-size="12" data-op="embB" x="1115" y="186" text-anchor="middle">View II</text>
           <text class="t-note" font-size="12" x="1115" y="228" text-anchor="middle"><tspan x="1115">Cell</tspan><tspan x="1115" dy="14">representation</tspan></text>
           <path class="conn" data-draw="7" d="M1123,200 L1163,200 M1163,149 L1163,251"/>
           <line class="conn" data-draw="7" x1="1163" y1="149" x2="1185" y2="149"/>
@@ -152,6 +154,8 @@
           <text class="t-box" x="1275" y="130" text-anchor="middle">Reconstruction</text>
           <circle class="emb small" data-op="recA" cx="1226" cy="162" r="7"/>
           <circle class="emb small dashed" data-op="recB" cx="1226" cy="162" r="7"/>
+          <text class="t-note" font-size="12" data-op="recA" x="1226" y="149" text-anchor="middle">View I</text>
+          <text class="t-note" font-size="12" data-op="recB" x="1226" y="149" text-anchor="middle">View II</text>
           <text class="t-plus" x="1243" y="167" text-anchor="middle">+</text>
           <rect class="seq" x="1254" y="154" width="14" height="16"/><rect class="pos" x="1268" y="154" width="14" height="16"/>
           <rect class="outline" x="1254" y="154" width="28" height="16" rx="2"/>
@@ -166,10 +170,12 @@
           <text class="t-box" x="1275" y="232" text-anchor="middle">VISReg</text>
           <g data-tx="alignA">
             <circle class="emb" data-op="visA" cx="1233" cy="264" r="8"/>
+            <text class="t-note" font-size="12" data-op="visA" x="1233" y="250" text-anchor="middle">View I</text>
             <g data-op="pair"><rect class="shaft" data-sx="half" data-origin="left" x="1245" y="263.25" width="30" height="1.5"/><path class="chev" d="M1250,259 L1244.5,264 L1250,269"/></g>
           </g>
           <g data-tx="alignB">
             <circle class="emb dashed" data-op="visB" cx="1317" cy="264" r="8"/>
+            <text class="t-note" font-size="12" data-op="visB" x="1317" y="250" text-anchor="middle">View II</text>
             <g data-op="pair"><rect class="shaft" data-sx="half" data-origin="right" x="1275" y="263.25" width="30" height="1.5"/><path class="chev" d="M1300,259 L1305.5,264 L1300,269"/></g>
           </g>
           <g data-dots></g>

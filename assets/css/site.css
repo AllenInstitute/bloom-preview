@@ -95,7 +95,7 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
   /* phones: the figure runs edge to edge and figure.js frames one stage at a time */
   .fig-frame { margin: 0 -20px; border-left: 0; border-right: 0; border-radius: 0; }
   .fig .t-title { font-size: 19px; }
-  .fig .t-box { font-size: 16px; }
+  .fig .t-box, .fig .t-view { font-size: 16px; }
   .fig .t-note, .fig .t-bracket, .fig .t-qkv { font-size: 15px; }
 }
 
@@ -121,7 +121,7 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
 /* ---- figure (SVG) ----------------------------------------------------- */
 .fig text { font-family: var(--font); }
 .t-title  { font-size: 16px; font-weight: 700; fill: var(--ink); }
-.t-view   { font-size: 19px; font-weight: 700; fill: var(--ink); }
+.t-view   { font-size: 14px; font-weight: 700; fill: #333; }
 .t-box    { font-size: 14px; font-weight: 700; fill: #333; }
 .t-bracket{ font-size: 14px; fill: var(--muted); }
 .t-label  { font-size: 13px; fill: #333; }
