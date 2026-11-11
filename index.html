@@ -27,8 +27,8 @@
       <h1>Unifying representations of brain cells across modalities and contexts.</h1>
       <p class="lede">A multimodal transformer-based model for single-cell RNA and ATAC data.</p>
       <div class="actions">
-        <!-- TODO: replace # with the preprint URL once it is public -->
-        <a class="btn btn-solid" href="#">Read the preprint</a>
+        <!-- Local copy of the preprint; swap for the bioRxiv URL once it is public -->
+        <a class="btn btn-solid" href="assets/pdf/2026_Gala-Convy-Marghi_Bloom.pdf" target="_blank" rel="noopener">Read the preprint</a>
         <a class="btn btn-line" href="https://github.com/alleninstitute/bloom-preview">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
           Code on GitHub
@@ -195,6 +195,18 @@
         <span class="step-count">0/3</span>
       </div>
       <p class="step-text" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- Context-length embedding: interactive UMAP hosted at rhngla.github.io/bloom-embed -->
+  <section class="context" id="context">
+    <div class="wrap context-inner">
+      <h2>Consistent across context sizes</h2>
+      <div class="embed-frame">
+        <iframe src="https://rhngla.github.io/bloom-embed/ctx.html?embed=1"
+                title="Bloom: cell embeddings across context length"
+                loading="lazy" allow="fullscreen"></iframe>
+      </div>
     </div>
   </section>
 </main>

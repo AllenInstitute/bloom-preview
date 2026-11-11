@@ -174,6 +174,12 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
 .dot-core { fill: var(--accent); }
 .token .tick { stroke-width: 2.5; stroke-linecap: round; }
 
+/* context-length section: interactive UMAP embedded from bloom-embed */
+.context { border-top: 1px solid var(--hairline); }
+.context-inner { max-width: 1320px; display: flex; flex-direction: column; gap: 24px; padding-top: 72px; padding-bottom: 88px; }
+.embed-frame { border: 1px solid #ececec; border-radius: 16px; overflow: hidden; }
+.embed-frame iframe { display: block; width: 100%; height: min(680px, 80vh); min-height: 460px; border: 0; }
+
 @media (prefers-reduced-motion: reduce) {
   .logo-reveal { animation: none; }
 }
@@ -182,9 +188,14 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
    Kept last so it overrides the base section padding above. */
 @media (max-width: 720px) {
   html { scroll-snap-type: y mandatory; }
-  .hero, .model { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; }
+  .hero, .model, .context { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; }
   .hero { align-content: center; }
   .model { display: flex; align-items: center; }
   .model-inner { width: 100%; padding-top: 32px; padding-bottom: 32px; }
   .step-text { min-height: 13em; }  /* room for the longest step text, so the layout doesn't jump */
+  .context { display: flex; align-items: center; }
+  .context-inner { width: 100%; padding-top: 32px; padding-bottom: 32px; }
+  /* the plot canvas captures touch (pan/zoom), so leave a strip above and below it for page swipes */
+  .embed-frame { margin: 0 -20px; border-left: 0; border-right: 0; border-radius: 0; }
+  .embed-frame iframe { height: 72svh; min-height: 420px; }
 }

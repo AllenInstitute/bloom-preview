@@ -5,13 +5,16 @@ Landing page for **bloom**, a multimodal transformer-based model for single-cell
 
 ## What the page does
 
-The page has two sections:
+The page has three sections:
 
 - **Hero:** the headline, the preprint and code links, and the bloom logo. The logo is revealed with a soft circular wipe that starts at the cell body.
 - **"From a cell to its representation":** an interactive version of panels a–b of the paper figure. Visitors step through it with the ‹ › buttons, or drag the slider. Each step has a short explanation. The three steps are:
   1. Experimental measurements
   2. Feature sampling
   3. Model training: both views pass through the encoder in turn, then the task heads (reconstruction and VISReg)
+- **"Consistent across context sizes":** the interactive context-length UMAP, embedded as an iframe from
+  [rhngla.github.io/bloom-embed/ctx.html](https://rhngla.github.io/bloom-embed/ctx.html) (`?embed=1` hides its standalone header).
+  The embed accepts `color=class|subclass|ctxlen`, `ctx=500…8000`, `autoplay=1`, `panel=1` and `caption=0` as URL parameters.
 
 ## Layout
 
@@ -21,12 +24,13 @@ assets/css/site.css     all styles, including the figure's
 assets/js/figure.js     the figure timeline + stepper (single source of truth for motion)
 assets/img/bloom-logo.svg   logo (traced neuron + geometric wordmark)
 assets/img/bloom-mark.svg   neuron only, used as the favicon
+assets/pdf/2026_Gala-Convy-Marghi_Bloom.pdf   preprint, linked from "Read the preprint"
 .nojekyll               serve files as-is on GitHub Pages
 ```
 
 ## Editing
 
-- **Copy and links:** edit them in `index.html`. The preprint button is marked `TODO` and currently points to `#`.
+- **Copy and links:** edit them in `index.html`. The preprint button points to the PDF in `assets/pdf/`; swap in the bioRxiv URL once it is public.
 - **Step text and step stops:** these are `TEXT` and `STOPS` at the top of `assets/js/figure.js`.
 - **Timing:** everything that moves is defined in seconds in `figure.js`:
   - `HOPS` and `SPLIT` set when the glowing dot travels; `HEADS` sets when both task heads glow together for each view.
