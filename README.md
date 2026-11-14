@@ -27,13 +27,13 @@ assets/css/site.css     all styles, including the figure's
 assets/js/figure.js     the figure timeline + stepper (single source of truth for motion)
 assets/img/bloom-logo.svg   logo (traced neuron + geometric wordmark)
 assets/img/bloom-mark.svg   neuron only, used as the favicon
-assets/pdf/2026_Gala-Convy-Marghi_Bloom.pdf   preprint, linked from "Read the preprint"
+assets/pdf/2026_Gala-Convy-Marghi_Bloom.pdf   local copy of the preprint (the button links to bioRxiv)
 .nojekyll               serve files as-is on GitHub Pages
 ```
 
 ## Editing
 
-- **Copy and links:** edit them in `index.html`. The preprint button points to the PDF in `assets/pdf/`; swap in the bioRxiv URL once it is public.
+- **Copy and links:** edit them in `index.html`. The preprint button points to the bioRxiv preprint (https://www.biorxiv.org/content/10.64898/2026.11.11.765881v1).
 - **Step text and step stops:** these are `TEXT` and `STOPS` at the top of `assets/js/figure.js`.
 - **Timing:** everything that moves is defined in seconds in `figure.js`:
   - `HOPS` and `SPLIT` set when the glowing dot travels; `HEADS` sets when both task heads glow together for each view.
