@@ -5,7 +5,7 @@ Landing page for **bloom**, a multimodal transformer-based model for single-cell
 
 ## What the page does
 
-The page has three sections:
+The page has four sections:
 
 - **Hero:** the headline, the preprint and code links, and the bloom logo. The logo is revealed with a soft circular wipe that starts at the cell body.
 - **"From a cell to its representation":** an interactive version of panels a–b of the paper figure. Visitors step through it with the ‹ › buttons, or drag the slider. Each step has a short explanation. The three steps are:
@@ -15,6 +15,9 @@ The page has three sections:
 - **"Consistent across context sizes":** the interactive context-length UMAP, embedded as an iframe from
   [rhngla.github.io/bloom-embed/ctx.html](https://rhngla.github.io/bloom-embed/ctx.html) (`?embed=1` hides its standalone header).
   The embed accepts `color=class|subclass|ctxlen`, `ctx=500…8000`, `autoplay=1`, `panel=1` and `caption=0` as URL parameters.
+- **"Aligned across modalities":** the interactive cross-modality UMAP, embedded as an iframe from
+  [rhngla.github.io/bloom-embed/mod.html](https://rhngla.github.io/bloom-embed/mod.html) (`?embed=1` hides its standalone header).
+  The embed accepts `color=class|subclass|modality`, `mod=rna|atac`, `autoplay=1`, `panel=1` and `caption=0` as URL parameters.
 
 ## Layout
 

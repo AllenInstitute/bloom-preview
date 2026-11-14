@@ -174,7 +174,7 @@ h2 { margin: 0 0 8px; font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); lin
 .dot-core { fill: var(--accent); }
 .token .tick { stroke-width: 2.5; stroke-linecap: round; }
 
-/* context-length section: interactive UMAP embedded from bloom-embed */
+/* embed sections (context length, cross-modality alignment): interactive UMAPs embedded from bloom-embed */
 .context { border-top: 1px solid var(--hairline); }
 .context-inner { max-width: 1320px; display: flex; flex-direction: column; gap: 24px; padding-top: 72px; padding-bottom: 88px; }
 .embed-frame { border: 1px solid #ececec; border-radius: 16px; overflow: hidden; }
